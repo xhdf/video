@@ -39,6 +39,24 @@
       the video tag </video>`
       video.style.display = "block"
     }
+    function name() {
+      const windowWidth = document.documentElement.clientWidth
+      const windowHeight = document.documentElement.clientHeight
+      const bili = windowHeight/windowWidth
+      console.log(bili);
+      if( bili <= 1.7) {
+        document.querySelector('.bg').style.top = - ((1.7 - bili) * 500) + 'px'
+        document.querySelector('.bg1').style.bottom = - ((1.7 - bili) * 500) + 'px'
+      }
+    }
+
+    name()
+
+
+    window.onresize = function () {
+      name()
+    }
+
   </script>
 </body>
 
