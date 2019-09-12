@@ -48,12 +48,9 @@ body {
   z-index: 1;
 }
 .video-wrap .close{
-  display: block;
-  width: 45px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #fff;
+  width: 30px;
+  height: 30px;
+  padding: 15px;
   float: right;
 }
 .video{
