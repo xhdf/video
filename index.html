@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,38 @@
   <link rel="stylesheet" href="./main.css">
   <title>首页</title>
 </head>
+
 <body>
   <img src="./img/bg.png" alt="" class="bg">
   <div class="nav">
-    <img src="./img/1.png" alt="">
-    <img src="./img/2.png" alt="">
-    <img src="./img/3.png" alt="">
-    <img src="./img/10.png" alt="">
-    <img src="./img/4.png" alt="">
-    <img src="./img/5.png" alt="">
-    <img src="./img/6.png" alt="">
-    <img src="./img/9.png" alt="">
-    <img src="./img/7.png" alt="">
-    <img src="./img/8.png" alt="">
+    <img src="./img/1.png" alt="" onclick="openVideo('01茅洋乡4.17')">
+    <img src="./img/2.png" alt="" onclick="openVideo('02涂茨镇旭拱岙22')">
+    <img src="./img/3.png" alt="" onclick="openVideo('03小白丈村 7.24')">
+    <img src="./img/10.png" alt="" onclick="openVideo('10茅洋乡白岩下村4.17')">
+    <img src="./img/4.png" alt="" onclick="openVideo('04西周土下村4.17')">
+    <img src="./img/5.png" alt="" onclick="openVideo('05贤庠镇青莱村4.17')">
+    <img src="./img/6.png" alt="" onclick="openVideo('06墙头镇溪里方村4.17')">
+    <img src="./img/9.png" alt="" onclick="openVideo('09石浦镇沙塘湾村4.17')">
+    <img src="./img/7.png" alt="" onclick="openVideo('07泗州头镇墩岙村4.17')">
+    <img src="./img/8.png" alt="" onclick="openVideo('08晓塘乡中岙村 4.17')">
+  </div>
+  <div class="video-wrap" id="video">
   </div>
   <img src="./img/bg1.png" alt="" class="bg1">
+  <script>
+    var video = document.getElementById("video")
+
+    function shup() {
+      video.style.display = "none"
+    }
+
+    function openVideo(name) {
+      video.innerHTML = ` <span class="close" onclick="shup()">X</span>
+    <video class="video" src="./video/${name}.mov" width="100%" controls="controls"> your browser does not support
+      the video tag </video>`
+      video.style.display = "block"
+    }
+  </script>
 </body>
+
 </html>
